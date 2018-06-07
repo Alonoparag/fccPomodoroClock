@@ -1,69 +1,65 @@
 body {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 2%, rgba(56, 56, 56, 1) 28%, rgba(79, 79, 79, 1) 54%, rgba(155, 101, 0, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#9b6500', GradientType=1);
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(38, 36, 0, 1) 51%, rgba(81, 66, 0, 1) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(38, 36, 0, 1) 51%, rgba(81, 66, 0, 1) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(38, 36, 0, 1) 51%, rgba(81, 66, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#514200', GradientType=1);
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-.decrease {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 1000;
-  line-height: normal;
-  font-size: 30px;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: transparent;
-  border: none;
-}
-
-/* Label */
-
-.label {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 28px;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-/* increase-button */
-
-.increase {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bolder;
-  line-height: normal;
-  font-size: 30px;
-  text-align: center;
-  color: #FFFFFF;
-  background-color: transparent;
-  border: none;
-}
-
-.time-input {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 30px;
-  text-align: center;
-  color: #FFFFFF;
-  background: transparent;
-}
-
-#header {
-  font-family: 'Gochi Hand', cursive;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  font-size: 46px;
-  text-align: center;
   color: white;
 }
 
-#timer {
-  box-sizing: border-box;
+#clock-container {
+  margin: 100px 20% 0 35%;
+}
+
+input {
+  width: 65px;
+  background-color: transparent;
+  color: inherit;
+  border: solid 7px green;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.input {
+  display: inline-block;
+  margin-right: 10%;
+}
+
+.clock-form {
+  display: flex;
+  /* padding: 0 5%; */
+}
+
+.decrease {
+  margin-left: 0px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+#animation {
+  margin-top: 50px;
+  margin-left: 7%;
+}
+
+#timer-count {
+  position: absolute;
+  text-align: center;
+  width: 240px;
+  height: 240px;
+  z-index: 2;
+  padding: 80px 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#timer-circle {
+  position: absolute;
+  z-index: 1;
 }
