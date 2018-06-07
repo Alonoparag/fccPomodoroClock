@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 1) 2%, rgba(56, 56, 56, 1) 28%, rgba(79, 79, 79, 1) 54%, rgba(155, 101, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#9b6500', GradientType=1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.decrease {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: normal;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+}
+
+/* Label */
+
+.label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 28px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* increase-button */
+
+.increase {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: normal;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+}
+
+.time-input {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  background: transparent;
+}
+
+#header {
+  font-family: 'Gochi Hand', cursive;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 46px;
+  text-align: center;
+  color: white;
+}
+
+#timer {
+  box-sizing: border-box;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Alon's Pomodoro Clock</title>
+    <!-- =========JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- ==============>BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- ============>FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <!-- ================>STYLESHEET -->
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+          <h1 id="header">Alon's Pomodoro Clock</h1>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-3">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8">
+              <div><span class="label">Break Length
+              </span></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1">
+              <div style="height: 40px; width: 40px;"><button id="break-increase" class="increase">+</button></div>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-1">
+              <div style="height: 40px; width: 40px;">
+                <input id="break-length" class="time-input" name="" type="text" maxlength="2" size="2" pattern="[0-9]" style="width: 60px;" value="25"></input>
+              </div>
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-1">
+              <div style="height: 40px; width: 40px;"><button id='break-decrease' class="decrease">-</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-3">
+          <div class="row">
+            <div class="col-lg-9">
+              <div><span class="label">Session&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLength
+              </span></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-1">
+              <div style="height: 40px; width: 40px;"><button id="session-increase" class="increase">+</button></div>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-1">
+              <div style="height: 40px; width: 40px;">
+                <input id='session-length' class="time-input" name="" type="text" maxlength="2" size="2" pattern="[0-9]" style="width: 60px;" value="25"></input>
+              </div>
+            </div>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-1">
+              <div style="height: 40px; width: 40px;"><button id="session-decrease" class="decrease">-</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-12" style="opacity: 0;">I'm Opaque</div>
+      </div>
+      <!-- ========== OPACITY ROW -->
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+          <canvas id="timer" width="240" height="240"></canvas>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
+      </div>
+      <div class="row"></div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,104 @@
+var canvas = document.querySelector('#timer-circle');
+var context = canvas.getContext('2d');
+// TIMER FUNCTIONS DECLARATIONS
+function timerInit() {
+	context.beginPath();
+	context.strokeStyle = "#527A71";
+	context.lineWidth = 2;
+	context.arc(120, 120, 118, 0, 2 * Math.PI);
+	context.stroke();
+}
+
+function drawStep() {
+	context.beginPath();
+	context.lineWidth = 4;
+	context.fillStyle = "#505000";
+	context.arc(120, 120, 115, Math.PI / 2 - Math.PI * step, Math.PI / 2 + Math.PI * step);
+	context.stroke();
+	context.fill();
+	document.querySelector('#countdown').innerText = '00:0' + (t - tChange).toString();
+}
+
+function initCount() {
+	t = 5;
+	tChange = 0;
+	step = tChange / t;
+}
+
+function timerReset() {
+	context.clearRect(0, 0, canvas.width, canvas.height);
+	//INITIALIZING FUNCTIONS AND BUTTONS
+	initCount();
+}
+//======COUNTER FUNCTION
+function timerCount() {
+	console.log(step);
+	if(step <= 1) {
+		//switch the label between break and session
+		drawStep();
+		tChange++;
+		step = tChange / t;
+		// 	setTimeout(function() {
+		// 	}, 1000);
+		//
+	}
+	else if(step >= 1) {
+		if(sessionSwitch) {
+			sessionSwitch = false;
+			document.querySelector('#label').innerText = 'Break!';
+			timerInit();
+			timerReset();
+		}
+		else if(!sessionSwitch) {
+			sessionSwitch = true;
+			document.querySelector('#label').innerText = 'Session';
+			timerInit();
+			timerReset();
+		}
+		//reset the circle
+		//switch the countdown to the correct time
+		drawStep();
+		tChange++;
+		step = tChange / t;
+	}
+}
+//======COUNTER FUNCTION
+$(document).ready(function() {
+	timerInit();
+});
+var t;
+var tChange;
+var step;
+var timer;
+initCount();
+let timerSwitch = false;
+let sessionSwitch = true;
+$('button.increase').click(function() {
+	if($(this)['0'].nextElementSibling.value >= 1 && $(this)['0'].nextElementSibling.value < 99) {
+		$(this)['0'].nextElementSibling.value++;
+	}
+});
+$('button.decrease').click(function() {
+	if($(this)['0'].previousElementSibling.value > 1 && $(this)['0'].previousElementSibling.value <= 99) {
+		$(this)['0'].previousElementSibling.value--;
+	}
+})
+$('#timer-count').on('click', function() {
+	if(!timerSwitch) {
+		timer = setInterval(timerCount, 1000);
+		timerSwitch = true;
+	}
+	else if(timerSwitch) {
+		clearInterval(timer);
+		timerSwitch = false;
+	}
+});
+//rewrtie the timerCount function as a loop instead of a set Interval.
+context.beginPath();
+context.lineWidth = 1;
+context.strokeStyle = "#505000";
+context.fillStyle = "#505000";
+context.fill();
+context.moveTo(0, 120);
+context.lineTo(240, 120);
+context.stroke();
